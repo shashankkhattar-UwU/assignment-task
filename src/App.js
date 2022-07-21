@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import ComplexList from './components/ComplexList/ComplexList'
+import React, {useState} from 'react'
+import states from './data/data'
+
 
 function App() {
+  const [data, setData]=useState(states)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ComplexList type={"state"} data={states}/>
     </div>
   );
 }
